@@ -1,0 +1,18 @@
+2015-09-04T19:08:26.389533000 0.374043s notice: Recursively removing directory /Users/dpiemont/myapp/rethinkdb_data/tmp
+2015-09-04T19:08:26.391981000 0.376494s notice: Initializing directory /Users/dpiemont/myapp/rethinkdb_data
+2015-09-04T19:08:26.392058000 0.376566s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/dpiemont/myapp/rethinkdb_data' did not already exist or is empty.)
+2015-09-04T19:08:26.393153000 0.377664s notice: Running rethinkdb 2.1.2 (CLANG 6.0 (clang-600.0.57))...
+2015-09-04T19:08:26.401517000 0.386028s notice: Running on Darwin 13.4.0 x86_64
+2015-09-04T19:08:26.401564000 0.386072s notice: Loading data from directory /Users/dpiemont/myapp/rethinkdb_data
+2015-09-04T19:08:26.496636000 0.481145s info: Automatically using cache size of 100 MB
+2015-09-04T19:08:26.496664000 0.481172s warn: Cache size does not leave much memory for server and query overhead (available memory: 569 MB).
+2015-09-04T19:08:26.496674000 0.481182s warn: Cache size is very low and may impact performance.
+2015-09-04T19:08:26.499497000 0.484005s notice: Listening for intracluster connections on port 29015
+2015-09-04T19:08:26.510103000 0.494611s notice: Listening for client driver connections on port 28015
+2015-09-04T19:08:26.510362000 0.494870s notice: Listening for administrative HTTP connections on port 8080
+2015-09-04T19:08:26.510368000 0.494876s notice: Listening on addresses: 127.0.0.1, ::1
+2015-09-04T19:08:26.510369000 0.494877s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2015-09-04T19:08:26.510374000 0.494882s notice: Server ready, "Daniels_MacBook_Air_3_local_au8" 8ccaa777-5747-45ae-9183-2c20506ed79b
+2015-09-04T19:09:11.707898000 45.691717s info: Table a3c3191e-b6d8-46be-9c2a-692f1abcc45c: Added replica on this server.
+2015-09-04T19:09:12.800104000 46.783909s info: Table a3c3191e-b6d8-46be-9c2a-692f1abcc45c: Starting a new Raft election for term 1.
+2015-09-04T19:09:12.810540000 46.794344s info: Table a3c3191e-b6d8-46be-9c2a-692f1abcc45c: This server is Raft leader for term 1. Latest log index is 0.
