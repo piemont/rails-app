@@ -1,4 +1,4 @@
-class Author
+class User
   include NoBrainer::Document
   include NoBrainer::Document::Timestamps
 

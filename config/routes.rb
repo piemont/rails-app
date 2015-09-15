@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # end
 
   namespace :api, constraints: {format: :json} do
-    resources :posts, :authors
+    resources :posts, :users
   end
 end
 
