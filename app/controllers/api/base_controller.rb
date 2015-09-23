@@ -27,13 +27,27 @@ module Api
     # POST /api/{plural_resource_name}
     # def create
     #   set_resource(resource_class.new(resource_params))
-    #
+    
     #   if get_resource.save
     #     render :show, status: :created
     #   else
     #     render json: get_resource.errors, status: :unprocessable_entity
     #   end
     # end
+
+    def create
+    @document = resource_class.new(resource_params)
+
+    respond_to do |format|
+      if @document.save?
+        format.html { redirect_to :controller => plural_resource_name, :action => 'show', :id => resource_params[:id] }
+        format.json { render json: @document, status: :created }
+      else
+        format.html { render '#{plural_resource_name}/show' }
+        format.json { render json: @document.errors, status: :unprocessable_entity }
+        end
+      end
+    end
 
     # # DELETE /api/{plural_resource_name}/1
     # def destroy
