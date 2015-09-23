@@ -4,7 +4,7 @@ module Api
     private
 
       def post_params
-        params.require(:user_id, :content).permit(:tags)
+        params.permit(:user_id, :content, :tags => [])
       end
 
       def query_params

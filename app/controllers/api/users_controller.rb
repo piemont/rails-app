@@ -4,7 +4,7 @@ module Api
     private
 
       def user_params
-        params.require(:display_name)
+        params.permit(:display_name)
       end
 
       def query_params

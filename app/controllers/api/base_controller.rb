@@ -3,6 +3,7 @@ module Api
     protect_from_forgery with: :null_session
     before_action :set_resource, only: [:show]
     respond_to :json
+    skip_before_filter  :verify_authenticity_token
 
     # GET /api/{plural_resource_name}
     def index
@@ -36,14 +37,15 @@ module Api
     # end
 
     def create
+    plural_resource_name = "@#{resource_name.pluralize}"
     @document = resource_class.new(resource_params)
 
     respond_to do |format|
       if @document.save?
-        format.html { redirect_to :controller => plural_resource_name, :action => 'show', :id => resource_params[:id] }
+#        format.html { redirect_to :controller => plural_resource_name, :action => 'show', :id => resource_params[:id] }
         format.json { render json: @document, status: :created }
       else
-        format.html { render '#{plural_resource_name}/show' }
+#        format.html { render '#{plural_resource_name}/show' }
         format.json { render json: @document.errors, status: :unprocessable_entity }
         end
       end
